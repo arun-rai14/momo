@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script>
+  window.onload = function() {
+    var password = prompt("Please enter the password to view this page:", "");
+    if(password != "arunRai") {
+      window.location = "about:blank"; // Redirects to a blank page if the password is wrong
+    }
+  };
+</script>
 <div class="container">
     <img src="momo.png" alt="Momo Dumpling" class="momo-img">
     <h2>Would you like to go on a date?</h2>
