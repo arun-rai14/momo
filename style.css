@@ -12,7 +12,7 @@ body, html {
     position: relative; /* Needed for absolute positioning of the floating "No" button */
 }
 
-.momo-img, #additionalImage {
+.momo-img {
     width: 100px; /* Adjust the width as needed */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Centers the image */
