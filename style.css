@@ -1,0 +1,55 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+    position: relative; /* Needed for absolute positioning of the floating "No" button */
+}
+
+.momo-img, #additionalImage {
+    width: 100px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Centers the image */
+    margin: 20px auto; /* Adds space above and below the image */
+}
+
+
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.green-button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+#message {
+    font-size: 50px; /* Makes the text larger */
+    margin-top: 100px; /* Adds some space above the message */
+    color: #333; /* Adjust the text color if needed */
+}
+
+#additionalImage {
+    width: 200px; /* Adjust this value to make the image bigger */
+    height: auto; /* This will maintain the aspect ratio of the image */
+    display: block; /* Ensures the image is centered if container width is adjusted */
+    margin: 20px auto; /* Adds space above the image and centers it horizontally */
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: space-between; /* This will space out the buttons more */
+    padding: 0 20px; /* Adds padding to the container, moving its contents more to the sides */
+}
+
