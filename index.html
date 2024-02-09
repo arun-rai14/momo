@@ -4,44 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Would You Like to Go on a Date?</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            text-align: center;
-        }
-
-        .additional-image {
-            width: 100px; /* Adjust based on your preference */
-            height: auto;
-            display: none; /* Hide all images initially */
-            margin-top: 20px;
-        }
-
-        .buttons-container {
-            margin-top: 20px;
-        }
-
-        button {
-            padding: 10px;
-            font-size: 16px;
-            margin: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-
-        .green-button {
-            background-color: #4CAF50;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="container">
@@ -52,59 +15,9 @@
         <button id="noBtn">No</button>
     </div>
     <p id="message"></p>
-    <img src="think.JPG" alt="Think Image" id="thinkImage" class="additional-image">
-    <img src="hard.JPG" alt="Hard Image" id="hardImage" class="additional-image">
-    <img src="seriously.JPG" alt="Serious Image" id="seriousImage" class="additional-image">
-    <img src="kidding.JPG" alt="Kidding Image" id="kiddingImage" class="additional-image">
-    <img src="YAY.JPG" alt="YAY Image" id="yayImage" class="additional-image">
+    <!-- Initially hidden image that will be shown when "No" is clicked -->
+    <img src="think.jpg" alt="Additional Image" id="additionalImage" style="display:none;">
 </div>
-<script>
-    let noBtnClickedCount = 0;
-
-    document.getElementById('noBtn').addEventListener('click', function() {
-        let yesBtn = document.getElementById('yesBtn');
-        let message = document.getElementById('message');
-        noBtnClickedCount++;
-        
-        let scaleValue = 1 + noBtnClickedCount * 1;
-        yesBtn.style.transform = `scale(${scaleValue})`;
-        yesBtn.classList.add('green-button');
-
-        document.querySelectorAll('.additional-image').forEach(img => img.style.display = 'none');
-
-        if (noBtnClickedCount === 1) {
-            message.textContent = "Are you actually sure?";
-            document.getElementById('thinkImage').style.display = "block";
-        } else if (noBtnClickedCount === 2) {
-            message.textContent = "Oh, playing hard to get? 😏";
-            document.getElementById('hardImage').style.display = "block";
-        } else if (noBtnClickedCount === 3) {
-            message.textContent = "Common Seriously!?";
-            document.getElementById('seriousImage').style.display = "block";
-        } else {
-            message.textContent = "Just kidding, we know you meant yes!";
-            document.getElementById('kiddingImage').style.display = "block";
-        }
-    });
-
-    document.getElementById('yesBtn').addEventListener('click', function() {
-        let message = document.getElementById('message');
-
-        document.querySelectorAll('.additional-image').forEach(img => img.style.display = 'none');
-
-        message.textContent = "YAY! 🎉 You have officially been booked with Arun for 18th of February.";
-        document.getElementById('yayImage').style.display = "block";
-
-        removeButtons();
-    });
-
-    function removeButtons() {
-        let container = document.querySelector('.container');
-        let buttonsContainer = document.querySelector('.buttons-container');
-        if (buttonsContainer) {
-            container.removeChild(buttonsContainer);
-        }
-    }
-</script>
+<script src="script.js"></script>
 </body>
 </html>
