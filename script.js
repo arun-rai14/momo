@@ -19,7 +19,7 @@ document.getElementById('noBtn').addEventListener('click', function() {
         additionalImage.alt = "Hard Image";
     } else if (noBtnClickedCount === 3) {
         message.textContent = "Common Seriously!?";
-        additionalImage.src = "seriously.Jpg";
+        additionalImage.src = "seriously.JPG";
         additionalImage.alt = "Serious Image";
     } else {
         message.textContent = "Just kidding, we know you meant yes!";
