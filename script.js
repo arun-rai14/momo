@@ -15,15 +15,15 @@ document.getElementById('noBtn').addEventListener('click', function() {
         additionalImage.style.display = "block"; // Show the first image if it's the first click
     } else if (noBtnClickedCount === 2) {
         message.textContent = "Oh, playing hard to get? 😏";
-        additionalImage.src = "hard.jpg";
+        additionalImage.src = "hard.JPG";
         additionalImage.alt = "Hard Image";
     } else if (noBtnClickedCount === 3) {
         message.textContent = "Common Seriously!?";
-        additionalImage.src = "Seriously.jpg";
+        additionalImage.src = "seriously.Jpg";
         additionalImage.alt = "Serious Image";
     } else {
         message.textContent = "Just kidding, we know you meant yes!";
-        additionalImage.src = "kidding.jpg";
+        additionalImage.src = "kidding.JPG";
         additionalImage.alt = "Kidding Image";
     }
 });
@@ -33,7 +33,7 @@ document.getElementById('yesBtn').addEventListener('click', function() {
     let additionalImage = document.getElementById('additionalImage');
 
     message.textContent = "YAY! 🎉 You have officially been booked with Arun for 18th of February.";
-    additionalImage.src = "YAY.jpg"; // Display this image when "Yes" is clicked
+    additionalImage.src = "YAY.JPG"; // Display this image when "Yes" is clicked
     additionalImage.alt = "YAY Image"; // Update alt attribute accordingly
     additionalImage.style.display = "block"; // Make sure the image is visible
 
